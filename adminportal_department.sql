@@ -16,24 +16,17 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `address`
+-- Table structure for table `department`
 --
 
-DROP TABLE IF EXISTS `address`;
+DROP TABLE IF EXISTS `department`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `address` (
-  `id` int NOT NULL AUTO_INCREMENT,
-  `type` varchar(45) NOT NULL COMMENT 'address type like Home/Work etc',
-  `objid` int NOT NULL COMMENT 'generally referring to userid from user table, however since to extend for future use made it objid to hold any type of address\nEx: we may have shop address , office address etc so earch may have different schemas',
-  `address1` varchar(45) NOT NULL,
-  `address2` varchar(45) DEFAULT NULL,
-  `state` varchar(2) NOT NULL,
-  `country` varchar(45) NOT NULL,
-  `zip` int NOT NULL,
-  `isactive` tinyint NOT NULL DEFAULT '1',
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+CREATE TABLE `department` (
+  `department_id` bigint NOT NULL AUTO_INCREMENT,
+  `dept_name` varchar(50) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`department_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=115 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -45,4 +38,4 @@ CREATE TABLE `address` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-07-31  0:08:33
+-- Dump completed on 2020-07-31  0:08:32
